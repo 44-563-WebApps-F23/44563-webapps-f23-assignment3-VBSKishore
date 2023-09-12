@@ -17,7 +17,7 @@
         <hr>
         <h1>SPORTS</h1>
         <p>Four kinds of Sports that I reccomende to everyone those are archery,chess,tennis,volley ball these sports may improve the intelectual skills and also physical Fitness of a athelete. </p>
-        <table border="10px">
+        <table border="5px",backgroundcolor=yellow>
             <tr>
                 <th>NAME OF A SPORT</th>
                 <th>REASON</th>
@@ -30,13 +30,19 @@
             <tr><td>Volley Ball</td><td>Fitness</td><td>6</td></tr>
         </table>
         <hr>
-        <h1>PHP</h1>
+        <h1>JQUERY</h1>
+        <blockquote cite="https://stackoverflow.com/questions/5489946/how-to-wait-for-the-end-of-resize-event-and-only-then-perform-an-action">How to wait for the 'end' of 'resize' event and only then perform an action?</blockquote>
+        <a href="https://stackoverflow.com/questions/5489946/how-to-wait-for-the-end-of-resize-event-and-only-then-perform-an-action">Stack OverFlow</a>
         <pre>
-            $execution_time = microtime(); // Start counting
-            // Your code
-            $execution_time = microtime() - $execution_time;
-            printf('It took %.5f sec', $execution_time);
+            var resizeTimer;
+            $(window).on('resize', function(e) {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function() {
+                     // Run code here, resizing has "stopped"
+                     }, 250);
+                    });
         </pre>
+        
 
 
 
